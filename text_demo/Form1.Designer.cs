@@ -37,26 +37,31 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.TB_new = new System.Windows.Forms.TextBox();
             this.BU_RE = new System.Windows.Forms.Button();
+            this.locate = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lager_temp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // save
             // 
-            this.save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.save.Location = new System.Drawing.Point(201, 279);
+            this.save.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.save.Location = new System.Drawing.Point(201, 270);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 0;
-            this.save.Text = "S&alg";
+            this.save.Text = "S&ale";
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 169);
+            this.label1.Location = new System.Drawing.Point(158, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 1;
@@ -65,8 +70,9 @@
             // 
             // Add_vine
             // 
-            this.Add_vine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Add_vine.Location = new System.Drawing.Point(12, 252);
+            this.Add_vine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add_vine.Location = new System.Drawing.Point(12, 270);
             this.Add_vine.Name = "Add_vine";
             this.Add_vine.Size = new System.Drawing.Size(75, 23);
             this.Add_vine.TabIndex = 5;
@@ -78,7 +84,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(276, 131);
             this.pictureBox1.TabIndex = 8;
@@ -86,8 +92,10 @@
             // 
             // CB_V_N
             // 
+            this.CB_V_N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CB_V_N.FormattingEnabled = true;
-            this.CB_V_N.Location = new System.Drawing.Point(22, 166);
+            this.CB_V_N.Location = new System.Drawing.Point(13, 192);
             this.CB_V_N.Name = "CB_V_N";
             this.CB_V_N.Size = new System.Drawing.Size(121, 21);
             this.CB_V_N.TabIndex = 9;
@@ -95,7 +103,9 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(204, 167);
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown1.Location = new System.Drawing.Point(202, 193);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -108,14 +118,18 @@
             // 
             // TB_new
             // 
-            this.TB_new.Location = new System.Drawing.Point(12, 281);
+            this.TB_new.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_new.Location = new System.Drawing.Point(12, 233);
             this.TB_new.Name = "TB_new";
-            this.TB_new.Size = new System.Drawing.Size(75, 20);
+            this.TB_new.Size = new System.Drawing.Size(122, 20);
             this.TB_new.TabIndex = 11;
             // 
             // BU_RE
             // 
-            this.BU_RE.Location = new System.Drawing.Point(201, 250);
+            this.BU_RE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BU_RE.Location = new System.Drawing.Point(201, 233);
             this.BU_RE.Name = "BU_RE";
             this.BU_RE.Size = new System.Drawing.Size(75, 23);
             this.BU_RE.TabIndex = 12;
@@ -123,12 +137,45 @@
             this.BU_RE.UseVisualStyleBackColor = true;
             this.BU_RE.Click += new System.EventHandler(this.BU_RE_Click);
             // 
+            // locate
+            // 
+            this.locate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.locate.Location = new System.Drawing.Point(108, 271);
+            this.locate.Name = "locate";
+            this.locate.Size = new System.Drawing.Size(75, 23);
+            this.locate.TabIndex = 13;
+            this.locate.Text = "locate";
+            this.locate.UseVisualStyleBackColor = true;
+            this.locate.Click += new System.EventHandler(this.locate_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(224, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "label2";
+            // 
+            // lager_temp
+            // 
+            this.lager_temp.AutoSize = true;
+            this.lager_temp.Location = new System.Drawing.Point(27, 9);
+            this.lager_temp.Name = "lager_temp";
+            this.lager_temp.Size = new System.Drawing.Size(57, 13);
+            this.lager_temp.TabIndex = 15;
+            this.lager_temp.Text = "Lagertemp";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(301, 314);
+            this.ClientSize = new System.Drawing.Size(301, 305);
+            this.Controls.Add(this.lager_temp);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.locate);
             this.Controls.Add(this.BU_RE);
             this.Controls.Add(this.TB_new);
             this.Controls.Add(this.numericUpDown1);
@@ -157,6 +204,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox TB_new;
         private System.Windows.Forms.Button BU_RE;
+        private System.Windows.Forms.Button locate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lager_temp;
     }
 }
 

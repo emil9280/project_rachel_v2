@@ -112,5 +112,11 @@ namespace text_demo
         {
 
         }
+
+        private void locate_Click(object sender, EventArgs e)
+        {
+            var form = new Form2();
+            form.Show(this);
+        }
     }
 }
