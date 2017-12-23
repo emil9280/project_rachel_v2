@@ -24,7 +24,7 @@ namespace text_demo
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            
+            this.Close();            
         }
 
         private void chose_file_Click(object sender, EventArgs e)
@@ -39,7 +39,24 @@ namespace text_demo
 
         private void save_Click(object sender, EventArgs e)
         {
+            Save_To_1
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+              
+        }
+        private string Save_To_1;
+        private string Save_To_2;
     }
 }

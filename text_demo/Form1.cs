@@ -54,7 +54,7 @@ namespace text_demo
         }
         private void Write_To()
         {
-            TextWriter txt = new StreamWriter("C:\\Users\\Emilm\\Desktop\\New folder\\demo.txt");
+            TextWriter txt = new StreamWriter("D:\\c#\\demo.txt");
             for (int i = 0; i < Name1.Count; i++)
             {
                 txt.WriteLine("");
@@ -65,7 +65,7 @@ namespace text_demo
         }
         private void Read_From()
         {
-            TextReader tet = new StreamReader("C:\\Users\\Emilm\\Desktop\\New folder\\demo.txt");
+            TextReader tet = new StreamReader("D:\\c#\\demo.txt");
             while (tet.ReadLine() != null)
             {
                 Name1.Add(tet.ReadLine());
@@ -118,5 +118,7 @@ namespace text_demo
             var form = new Form2();
             form.Show(this);
         }
+        private string Save_To_1 = "D:\\c#\\demo.txt";
+        private string Save_To_2 = "D:\\c#\\demo1.txt";
     }
 }

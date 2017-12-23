@@ -32,24 +32,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cancel = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.chose_file = new System.Windows.Forms.Button();
             this.Chose_file2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 80);
+            this.label1.Location = new System.Drawing.Point(12, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Temp overvågning:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 24);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 1;
@@ -77,14 +78,9 @@
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
             // chose_file
             // 
-            this.chose_file.Location = new System.Drawing.Point(15, 51);
+            this.chose_file.Location = new System.Drawing.Point(15, 25);
             this.chose_file.Name = "chose_file";
             this.chose_file.Size = new System.Drawing.Size(75, 23);
             this.chose_file.TabIndex = 4;
@@ -94,13 +90,17 @@
             // 
             // Chose_file2
             // 
-            this.Chose_file2.Location = new System.Drawing.Point(15, 106);
+            this.Chose_file2.Location = new System.Drawing.Point(15, 86);
             this.Chose_file2.Name = "Chose_file2";
             this.Chose_file2.Size = new System.Drawing.Size(75, 23);
             this.Chose_file2.TabIndex = 5;
             this.Chose_file2.Text = "Choose file";
             this.Chose_file2.UseVisualStyleBackColor = true;
             this.Chose_file2.Click += new System.EventHandler(this.Chose_file2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form2
             // 
@@ -115,6 +115,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "locate";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,8 +127,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button save;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button chose_file;
         private System.Windows.Forms.Button Chose_file2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
