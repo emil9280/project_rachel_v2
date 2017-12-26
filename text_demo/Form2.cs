@@ -29,7 +29,7 @@ namespace text_demo
 
         private void chose_file_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void Chose_file2_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace text_demo
 
         private void save_Click(object sender, EventArgs e)
         {
-            Save_To_1
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -58,5 +58,10 @@ namespace text_demo
         }
         private string Save_To_1;
         private string Save_To_2;
+
+        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

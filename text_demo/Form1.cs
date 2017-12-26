@@ -13,6 +13,9 @@ namespace text_demo
 {
     public partial class Form1 : Form
     {
+
+        private string Path_final_1;
+        private string Path_final_2;
         private List<string> Name1 = new List<string>();
         private List<int> Amount = new List<int>();
         public Form1()
@@ -23,6 +26,24 @@ namespace text_demo
             {
                 CB_V_N.Items.Add(element);
             }
+            path_1();
+           
+        }
+        private void path_1()
+        {
+            string Path_1 = Directory.GetCurrentDirectory();
+            string Path_2 = Path_1 + "demo.txt";
+            string Path_3 = Path_1 + "demo1.txt";
+            if (!File.Exists(Path_2))
+            {
+                File.Create(Path_2);
+            }
+            if (!File.Exists(Path_3))
+            {
+                File.Create(Path_3);
+            }
+            Path_final_1 = Path_2;
+            Path_final_2 = Path_3;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -54,7 +75,7 @@ namespace text_demo
         }
         private void Write_To()
         {
-            TextWriter txt = new StreamWriter("D:\\c#\\demo.txt");
+            TextWriter txt = new StreamWriter(Path_final_1);
             for (int i = 0; i < Name1.Count; i++)
             {
                 txt.WriteLine("");
@@ -65,7 +86,7 @@ namespace text_demo
         }
         private void Read_From()
         {
-            TextReader tet = new StreamReader("D:\\c#\\demo.txt");
+            TextReader tet = new StreamReader(Path_final_2);
             while (tet.ReadLine() != null)
             {
                 Name1.Add(tet.ReadLine());
@@ -118,7 +139,5 @@ namespace text_demo
             var form = new Form2();
             form.Show(this);
         }
-        private string Save_To_1 = "D:\\c#\\demo.txt";
-        private string Save_To_2 = "D:\\c#\\demo1.txt";
     }
 }
