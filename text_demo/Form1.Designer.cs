@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.save = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,9 +38,8 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.TB_new = new System.Windows.Forms.TextBox();
             this.BU_RE = new System.Windows.Forms.Button();
-            this.locate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lager_temp = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -137,35 +137,20 @@
             this.BU_RE.UseVisualStyleBackColor = true;
             this.BU_RE.Click += new System.EventHandler(this.BU_RE_Click);
             // 
-            // locate
-            // 
-            this.locate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.locate.Location = new System.Drawing.Point(108, 271);
-            this.locate.Name = "locate";
-            this.locate.Size = new System.Drawing.Size(75, 23);
-            this.locate.TabIndex = 13;
-            this.locate.Text = "locate";
-            this.locate.UseVisualStyleBackColor = true;
-            this.locate.Click += new System.EventHandler(this.locate_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(224, 9);
+            this.label2.Location = new System.Drawing.Point(28, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "label2";
             // 
-            // lager_temp
+            // timer1
             // 
-            this.lager_temp.AutoSize = true;
-            this.lager_temp.Location = new System.Drawing.Point(27, 9);
-            this.lager_temp.Name = "lager_temp";
-            this.lager_temp.Size = new System.Drawing.Size(57, 13);
-            this.lager_temp.TabIndex = 15;
-            this.lager_temp.Text = "Lagertemp";
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -173,9 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(301, 305);
-            this.Controls.Add(this.lager_temp);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.locate);
             this.Controls.Add(this.BU_RE);
             this.Controls.Add(this.TB_new);
             this.Controls.Add(this.numericUpDown1);
@@ -204,9 +187,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox TB_new;
         private System.Windows.Forms.Button BU_RE;
-        private System.Windows.Forms.Button locate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lager_temp;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace text_demo
 {
@@ -21,39 +22,31 @@ namespace text_demo
         public Form1()
         {
             InitializeComponent();
+            path_1();
             Read_From();
-            foreach(string element in Name1)
+            foreach (string element in Name1)
             {
                 CB_V_N.Items.Add(element);
             }
-            path_1();
-           
+            Check_temp();
         }
+
         private void path_1()
         {
             string Path_1 = Directory.GetCurrentDirectory();
-            string Path_2 = Path_1 + "demo.txt";
-            string Path_3 = Path_1 + "demo1.txt";
+            string Path_2 = Path_1 + @"\demo.txt";
+            string Path_3 = Path_1 + @"\demo1.txt";
             if (!File.Exists(Path_2))
             {
                 File.Create(Path_2);
             }
+
             if (!File.Exists(Path_3))
             {
                 File.Create(Path_3);
             }
             Path_final_1 = Path_2;
             Path_final_2 = Path_3;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -72,7 +65,9 @@ namespace text_demo
             label1.Text = Amount[CB_V_N.SelectedIndex].ToString();
             Write_To();
             numericUpDown1.Value = 0;
+
         }
+
         private void Write_To()
         {
             TextWriter txt = new StreamWriter(Path_final_1);
@@ -80,17 +75,18 @@ namespace text_demo
             {
                 txt.WriteLine("");
                 txt.WriteLine(Name1[i]);
-                txt.WriteLine(Amount[i]);                
+                txt.WriteLine(Amount[i]);
             }
             txt.Close();
         }
+
         private void Read_From()
         {
-            TextReader tet = new StreamReader(Path_final_2);
+            TextReader tet = new StreamReader(Path_final_1);
             while (tet.ReadLine() != null)
             {
                 Name1.Add(tet.ReadLine());
-                Amount.Add(Convert.ToInt32(tet.ReadLine()));                
+                Amount.Add(Convert.ToInt32(tet.ReadLine()));
             }
             tet.Close();
         }
@@ -106,14 +102,10 @@ namespace text_demo
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void Check_temp()
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            var LastLine = File.ReadLines(Path_final_2).Last();
+            label2.Text = LastLine;
         }
 
         private void BU_RE_Click(object sender, EventArgs e)
@@ -134,10 +126,10 @@ namespace text_demo
 
         }
 
-        private void locate_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            var form = new Form2();
-            form.Show(this);
+            var LastLine = File.ReadLines(Path_final_2).Last();
+            label2.Text = LastLine;
         }
     }
 }
